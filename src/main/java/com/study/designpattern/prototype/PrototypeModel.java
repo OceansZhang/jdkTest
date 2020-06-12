@@ -1,4 +1,4 @@
-package designpattern.prototype;
+package com.study.designpattern.prototype;
 
 /**
  * @ClassName PrototypeModel

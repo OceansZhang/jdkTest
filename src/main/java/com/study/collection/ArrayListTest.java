@@ -1,4 +1,4 @@
-package collection;
+package com.study.collection;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -42,9 +42,9 @@ public class ArrayListTest<S> {
             System.out.println(host);
         }
         //方法4
-        list.forEach(host->System.out.println(list));
+//        list.forEach(host->System.out.println(list));
 
-        List<String> hostList = new ArrayList<>(3);
+        List<String> hostList = new ArrayList<String>(3);
         hostList.add("host1");
         hostList.add("host2");
         hostList.add("host3");

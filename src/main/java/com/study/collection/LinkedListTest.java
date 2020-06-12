@@ -1,4 +1,4 @@
-package collection;
+package com.study.collection;
 
 import java.util.LinkedList;
 
@@ -12,7 +12,7 @@ import java.util.LinkedList;
 public class LinkedListTest {
 
     public static void main(String[] args) {
-        LinkedList<String> hostList = new LinkedList<>();
+        LinkedList<String> hostList = new LinkedList<String>();
         hostList.add("host1");
         hostList.add("host2");
         hostList.add("host3");

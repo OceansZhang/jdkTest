@@ -1,4 +1,4 @@
-package concurrent;
+package com.study.concurrent;
 
 /**
  * @ClassName ReentrantLockTest

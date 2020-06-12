@@ -1,4 +1,4 @@
-package designpattern.facade;
+package com.study.designpattern.facade;
 
 /**
  * @ClassName MainCkient
@@ -11,7 +11,7 @@ package designpattern.facade;
 public class MainClient {
     public static void main(String[] args) {
         // 购买外观类，客户端并不知道里面调用了登录，订单和支付子系统
-        ShopingFacade shopingFacade = new ShopingFacade();
-        shopingFacade.shop("tom", "123");
+//        ShopingFacade shopingFacade = new ShopingFacade();
+//        shopingFacade.shop("tom", "123");
     }
 }
