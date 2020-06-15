@@ -18,8 +18,7 @@ import java.util.Random;
     //v5:如果代理类TankLogProxy重用，可以代理任何类型，（分离代理行为和被代理对象，使用jdk动态代理）
     //jdk动态代理：jdk反射必须面向接口
 public class Tank implements Moveable {
-    //模拟坦克移动
-    @Override
+
     public void move() {
         System.out.println("Tank moving claclalcla......");
         try {
@@ -41,7 +40,6 @@ class TankTimeProxy implements Moveable {
         this.m = moveable;
     }
 
-    @Override
     public void move() {
         long start = System.currentTimeMillis();
         m.move();
@@ -68,7 +66,6 @@ class MyProxyHandler implements InvocationHandler{
         this.tank = tank;
     }
 
-    @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println("tank start...."+method.getName());
         Object o = method.invoke(tank,args);//tank.move()
