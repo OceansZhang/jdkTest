@@ -1,3 +1,5 @@
+package com.study.synchronizedp;
+
 import java.util.ArrayList;
 import java.util.List;
 

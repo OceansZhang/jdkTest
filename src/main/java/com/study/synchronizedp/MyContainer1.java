@@ -1,32 +1,36 @@
+package com.study.synchronizedp;
+
 import java.util.ArrayList;
 import java.util.List;
 
+
 /**
- * @ClassName MyContainer2
+ * @ClassName MyContainer1
  * @Description TODO
  * @Author zy
- * @Date 2020/5/29 上午10:36
+ * @Date 2020/5/29 上午10:13
  */
 /*
- *添加 volatile 使t2能得到通知
+ * list不可见，不能结束。
  **/
-public class MyContainer2 {
-    volatile List  container = new ArrayList();
+public class MyContainer1 {
+
+    List container = new ArrayList();
 
     public void add(Object o){
         container.add(o);
     }
 
-    public int size(){
+    public int getSize(){
         return container.size();
     }
 
     public static void main(String[] args) {
-        MyContainer2 myContainer2 = new MyContainer2();
+        MyContainer1 myContainer1 = new MyContainer1();
 
         new Thread(() ->{
             for(int i=0;i<10;i++){
-                myContainer2.add(new Object());
+                myContainer1.add(i);
                 System.out.println("thread t1 add "+i);
                 try {
                     Thread.sleep(1000);
@@ -37,12 +41,14 @@ public class MyContainer2 {
         },"t1").start();
 
         new Thread(() ->{
+
             while (true){
-                if(myContainer2.size() == 5){
+                if(myContainer1.getSize() == 5){
                     System.out.println("thread t2 end !!!");
                     break;
                 }
             }
+
         },"t2").start();
 
 

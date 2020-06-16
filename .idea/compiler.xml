@@ -9,7 +9,7 @@
         <module name="jdkTest" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="jdkTest" target="1.8" />
     </bytecodeTargetLevel>
   </component>
